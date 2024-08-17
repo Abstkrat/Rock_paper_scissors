@@ -7,6 +7,10 @@
   </head>
   <body>
     <script>
+      function Rock_paper_scissors_game() {
+        let user_choice = getUser_choice();
+        let computer_choice = getComputer_choice();
+      }
       function startGame() {
         let answer = prompt("This is a Rock-Paper-Scissors game. Ready to play? (y/n): ");
         if (answer == null || answer == undefined) return 0;
