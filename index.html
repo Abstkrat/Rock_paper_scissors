@@ -12,6 +12,10 @@
         while (choice == null || choice == undefined || choice == "")
         choice = prompt("Don't be a jerk, enter your choice please");
         choice = choice.toLowerCase();
+        while ((choice != "rock") && (choice != "scissors") && (choice != "paper"))
+          choice = prompt(`Ok NOOB, enter either "rock", "scissors" or "paper"`)
+          choice = choice.toLowerCase();
+          return choice;
       }
       function Rock_paper_scissors_game() {
         let user_choice = getUser_choice();
