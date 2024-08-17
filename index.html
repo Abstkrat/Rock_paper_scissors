@@ -7,6 +7,16 @@
   </head>
   <body>
     <script>
+      function getComputer_choice() {
+        let computerChoice = Math.floor(Math.random() * 3);
+        if (computerChoice == 0)
+          computerChoice = "rock";
+        else if (computerChoice == 1)
+          computerChoice = "paper";
+        else if (computerChoice == 2)
+          computerChoice = "scissors";
+        return computerChoice;
+      }
       function getUser_choice() {
         let choice = prompt("Enter your choice");
         while (choice == null || choice == undefined || choice == "")
