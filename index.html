@@ -9,6 +9,8 @@
     <script>
       function getUser_choice() {
         let choice = prompt("Enter your choice");
+        while (choice == null || choice == undefined || choice == "")
+        choice = prompt("Don't be a jerk, enter your choice please");
       }
       function Rock_paper_scissors_game() {
         let user_choice = getUser_choice();
