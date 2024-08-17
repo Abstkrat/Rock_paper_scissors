@@ -27,9 +27,10 @@
         while (choice == null || choice == undefined || choice == "")
         choice = prompt("Don't be a jerk, enter your choice please");
         choice = choice.toLowerCase();
-        while ((choice != "rock") && (choice != "scissors") && (choice != "paper"))
+         while ((choice != "rock") && (choice != "scissors") && (choice != "paper")) {
           choice = prompt(`Ok NOOB, enter either "rock", "scissors" or "paper"`)
           choice = choice.toLowerCase();
+         }
           return choice;
       }
 
