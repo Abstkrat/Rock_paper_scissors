@@ -7,6 +7,10 @@
   </head>
   <body>
     <script>
+      let user_score = 0;
+      let computer_score = 0;
+      startGame();
+
       function getComputer_choice() {
         let computerChoice = Math.floor(Math.random() * 3);
         if (computerChoice == 0)
@@ -17,6 +21,7 @@
           computerChoice = "scissors";
         return computerChoice;
       }
+
       function getUser_choice() {
         let choice = prompt("Enter your choice");
         while (choice == null || choice == undefined || choice == "")
@@ -27,6 +32,7 @@
           choice = choice.toLowerCase();
           return choice;
       }
+
       function Rock_paper_scissors_game() {
         let user_choice = getUser_choice();
         let computer_choice = getComputer_choice();
@@ -57,6 +63,7 @@
           computer_score = computer_score + 1;
         }
       }
+
       function startGame() {
         let answer = prompt("This is a Rock-Paper-Scissors game. Ready to play? (y/n): ");
         if (answer == null || answer == undefined) return 0;
