@@ -67,6 +67,12 @@
           Rock_paper_scissors_game();
           Rock_paper_scissors_game();
           alert(`Final score:\nYou: ${user_score}\nComputer: ${computer_score}`);
+          if (user_score == computer_score)
+            alert("It's a tie. Tough battle!");
+          else if (user_score > computer_score)
+            alert("You win. Well played!");
+          else
+            alert("You lose. Not good enough");
         }
       }
     </script>
