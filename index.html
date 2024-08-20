@@ -65,8 +65,22 @@
         }
       }
 
+      function getUser_input()  {
+         let isValid = false;
+         while(!isValid) {
+           try {
+             let answer = prompt("This is a Rock-Paper-Scissors game. Ready to play?");
+             validateInput(answer);
+             return answer;
+             isValid = true;
+           }   catch (error) {
+
+                 alert(error.message);
+               }
+          }
+      }      
       function startGame() {
-        let answer = prompt("This is a Rock-Paper-Scissors game. Ready to play? (y/n): ");
+        let answer = getUser_input();
         if (answer == null || answer == undefined) return 0;
         else  {
           Rock_paper_scissors_game();
