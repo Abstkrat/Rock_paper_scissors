@@ -65,6 +65,13 @@
         }
       }
 
+      function validateInput(user_input)  {
+          const alphabetic_range = /[^a-zA-Z]/;
+          if (alphabetic_range.test(user_input)) {
+           throw new Error("Only alphabetic characters are allowed!");
+          } else return(user_input);
+      }
+
       function getUser_input()  {
          let isValid = false;
          while(!isValid) {
@@ -78,7 +85,8 @@
                  alert(error.message);
                }
           }
-      }      
+      }
+            
       function startGame() {
         let answer = getUser_input();
         if (answer == null || answer == undefined) return 0;
