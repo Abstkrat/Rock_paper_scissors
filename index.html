@@ -11,6 +11,17 @@
       let computer_score = 0;
       startGame();
 
+      function printResults() {
+            alert(`Final score:\nYou: ${user_score}\nComputer: ${computer_score}`);
+            if (user_score == computer_score)
+              alert("It's a tie. Tough battle!");
+            else if (user_score > computer_score)
+              alert("You win. Well played!");
+            else
+              alert("You lose. Not good enough");
+          
+      }
+            
       function getComputer_choice() {
         let computerChoice = Math.floor(Math.random() * 3);
         if (computerChoice == 0)
@@ -86,7 +97,7 @@
                }
           }
       }
-            
+
       function startGame() {
         let answer = getUser_input();
         if (answer == null || answer == undefined) return 0;
@@ -96,14 +107,8 @@
           Rock_paper_scissors_game();
           Rock_paper_scissors_game();
           Rock_paper_scissors_game();
-          alert(`Final score:\nYou: ${user_score}\nComputer: ${computer_score}`);
-          if (user_score == computer_score)
-            alert("It's a tie. Tough battle!");
-          else if (user_score > computer_score)
-            alert("You won the game. Well played!");
-          else
-            alert("You lost the game. Not good enough");
         }
+        printResults();
       }
     </script>
     </body
